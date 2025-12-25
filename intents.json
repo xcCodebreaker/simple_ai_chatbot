@@ -1,0 +1,640 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "hi",
+        "hello",
+        "hey",
+        "good morning",
+        "good afternoon",
+        "good evening",
+        "yo",
+        "what's up",
+        "whats up",
+        "sup",
+        "howdy",
+        "greetings",
+        "hiya"
+      ],
+      "responses": [
+        "Hello! Ready to talk PC builds?",
+        "Hi there! How can I help with your PC plans?",
+        "Hey! Want parts advice or a build recommendation?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "bye",
+        "goodbye",
+        "see you later",
+        "talk to you later",
+        "catch you later"
+      ],
+      "responses": [
+        "Goodbye!",
+        "See you!",
+        "Happy building!"
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "thanks",
+        "thank you",
+        "appreciate it",
+        "thanks a lot"
+      ],
+      "responses": [
+        "Anytime!",
+        "You’re welcome!",
+        "Glad to help."
+      ]
+    },
+    {
+      "tag": "pc_help_general",
+      "patterns": [
+        "help me build a pc",
+        "pc build help",
+        "how to build a pc",
+        "what do i need for a pc",
+        "guide to building a pc",
+        "how do i start building a pc",
+        "i want to build a pc",
+        "building my first pc",
+        "new pc builder",
+        "pc building guide",
+        "how to assemble a pc"
+      ],
+      "responses": [
+        "I can help! Tell me your budget and if it's for gaming, work, or mixed use.",
+        "Happy to help. What's your budget and main use (gaming/work/streaming)?"
+      ]
+    },
+    {
+      "tag": "desktop_build",
+      "patterns": [
+        "desktop build",
+        "build a desktop",
+        "gaming desktop",
+        "recommend parts for desktop",
+        "custom pc parts list",
+        "tower build",
+        "mid range desktop",
+        "high end desktop",
+        "low budget desktop"
+      ],
+      "responses": [
+        "Give me a budget and I’ll suggest a desktop parts list.",
+        "Tell me how much you want to spend and I’ll recommend a desktop build.",
+        "Share budget + main use (gaming/work/creation) and I'll map parts."
+      ]
+    },
+    {
+      "tag": "laptop_help",
+      "patterns": [
+        "buy a laptop",
+        "recommend a laptop",
+        "laptop for work",
+        "laptop for gaming",
+        "what laptop to buy"
+      ],
+      "responses": [
+        "I mainly help with desktops, but I can still give general laptop buying tips like CPU (H-series for performance), at least 16GB RAM, and SSD storage."
+      ]
+    },
+    {
+      "tag": "budget_question",
+      "patterns": [
+        "build a pc for 800",
+        "pc build for 1000 dollars",
+        "i have 1500 budget for pc",
+        "what can i get for 600",
+        "pc parts for 2000",
+        "my budget is 1200",
+        "pc build 500"
+      ],
+      "responses": [
+        "Share your exact budget and I’ll map it to a parts list.",
+        "Tell me the budget and I’ll suggest low/mid/high options."
+      ]
+    },
+    {
+      "tag": "buy_prebuilt",
+      "patterns": [
+        "buy a prebuilt pc",
+        "prebuilt or custom",
+        "should i buy prebuilt",
+        "recommend prebuilt",
+        "is prebuilt worth it"
+      ],
+      "responses": [
+        "Custom gives better value; prebuilt is fine if priced close to part cost and includes a good PSU and airflow.",
+        "Prebuilt is okay if the GPU/CPU are decent and the price is near parts cost; otherwise custom wins."
+      ]
+    },
+    {
+      "tag": "usage_gaming",
+      "patterns": [
+        "pc for gaming",
+        "best gaming pc build",
+        "budget gaming pc",
+        "1440p gaming build",
+        "1080p gaming build"
+      ],
+      "responses": [
+        "For gaming, prioritize GPU. Share budget and resolution target (1080p/1440p/4K) and I'll suggest parts.",
+        "Tell me your budget and target resolution; I’ll map a GPU/CPU pair that fits."
+      ]
+    },
+    {
+      "tag": "usage_workstation",
+      "patterns": [
+        "pc for work",
+        "workstation pc",
+        "pc for programming",
+        "pc for 3d modeling",
+        "pc for video editing",
+        "productivity pc"
+      ],
+      "responses": [
+        "For workstations, prioritize CPU cores, RAM, and fast NVMe. Share your budget and workloads (coding/video/3D) and I’ll suggest parts.",
+        "Workloads like editing/3D benefit from more RAM and fast storage; tell me budget + tasks and I’ll propose a build."
+      ]
+    },
+    {
+      "tag": "usage_streaming",
+      "patterns": [
+        "pc for streaming",
+        "streaming pc build",
+        "game and stream",
+        "obs streaming build"
+      ],
+      "responses": [
+        "For streaming, aim for a GPU with some headroom and a CPU with good multi-threading. Share budget and game targets, and I’ll suggest parts.",
+        "Streaming while gaming? Tell me budget and game settings; I’ll balance CPU/GPU accordingly."
+      ]
+    },
+    {
+      "tag": "cooling_question",
+      "patterns": [
+        "air vs liquid cooling",
+        "do i need liquid cooling",
+        "best cpu cooler",
+        "pc cooling advice"
+      ],
+      "responses": [
+        "Air coolers are great up to mid/high builds; 240mm AIO if you want quieter under load. Ensure your case has good airflow.",
+        "Pick a quality air cooler unless you need top-end thermals or low noise under heavy load; then a 240/360 AIO is fine."
+      ]
+    },
+    {
+      "tag": "psu_question",
+      "patterns": [
+        "what psu do i need",
+        "power supply for build",
+        "psu wattage",
+        "is 750w enough"
+      ],
+      "responses": [
+        "Aim for 80+ Gold from a reputable brand. 550W low, 650–750W mid, 750–850W high builds.",
+        "Check GPU/CPU power draw; add headroom. Good brands and 80+ Gold are key."
+      ]
+    },
+    {
+      "tag": "storage_question",
+      "patterns": [
+        "how much storage do i need",
+        "ssd or hdd",
+        "nvme vs sata",
+        "storage for gaming pc"
+      ],
+      "responses": [
+        "Use NVMe SSD as primary: 1TB for gaming/creation, add HDD only for bulk storage.",
+        "Go NVMe first; add SATA SSD/HDD only if you need more cheap space."
+      ]
+    },
+    {
+      "tag": "peripherals",
+      "patterns": [
+        "what monitor should i get",
+        "keyboard and mouse",
+        "gaming monitor recommendation"
+      ],
+      "responses": [
+        "Match monitor to GPU: 1080p high refresh for budget/mid, 1440p 144Hz for mid/high. Any reliable keyboard/mouse you like works.",
+        "Pick a monitor based on GPU: 1080p/144Hz (budget-mid), 1440p/144Hz (mid-high)."
+      ]
+    },
+    {
+      "tag": "os_question",
+      "patterns": [
+        "windows or linux for gaming",
+        "what os for gaming",
+        "should i use windows",
+        "best os for pc build"
+      ],
+      "responses": [
+        "Windows has best game compatibility; Linux is fine if you’re comfortable and your games support Proton.",
+        "Use Windows for widest support; Linux if you know your games/tools work there."
+      ]
+    },
+    {
+      "tag": "upgrade_path",
+      "patterns": [
+        "can i upgrade later",
+        "future proof build",
+        "upgrade path",
+        "should i leave room to upgrade"
+      ],
+      "responses": [
+        "Choose a board with enough slots and a PSU with headroom; GPUs/SSDs/RAM are easy upgrades later.",
+        "Leave PSU headroom and pick a platform with a clear CPU upgrade path; GPUs and SSDs are simple to swap later."
+      ]
+    },
+    {
+      "tag": "troubleshoot_boot",
+      "patterns": [
+        "pc not booting",
+        "no display after build",
+        "debug build won't start",
+        "my pc won't turn on"
+      ],
+      "responses": [
+        "Check 24-pin + CPU power, GPU power, RAM seated, monitor on GPU output, and front-panel connectors.",
+        "Reseat RAM/GPU, check power cables, try one RAM stick, and ensure the monitor is on the GPU port."
+      ]
+    },
+    {
+      "tag": "maintenance",
+      "patterns": [
+        "pc maintenance tips",
+        "how often to clean pc",
+        "dust cleaning",
+        "pc care"
+      ],
+      "responses": [
+        "Clean dust every few months, keep temps in check, and update GPU drivers periodically.",
+        "Dust filters help; quick clean every few months keeps airflow healthy."
+      ]
+    },
+    {
+      "tag": "where_to_buy",
+      "patterns": [
+        "where to buy parts",
+        "best place to buy pc parts",
+        "trusted stores for pc parts"
+      ],
+      "responses": [
+        "Look for reputable retailers with good return policies; compare prices and avoid no-name PSUs.",
+        "Buy from trusted stores with returns; avoid unknown PSU brands even if cheap."
+      ]
+    },
+    {
+      "tag": "budget_entry_gaming",
+      "patterns": [
+        "build for 500",
+        "build for 600",
+        "build for 700",
+        "gaming pc 500",
+        "gaming pc 600",
+        "gaming pc 700",
+        "budget gaming build",
+        "cheap gaming pc",
+        "entry level gaming"
+      ],
+      "responses": [
+        "**Entry Gaming Build ($500-700)**\n\nCPU: AMD Ryzen 5 5600 ($130)\nGPU: AMD RX 6600 ($200)\nRAM: 16GB DDR4-3200 ($35)\nStorage: 500GB NVMe SSD ($30)\nMotherboard: B450M ($70)\nPSU: 550W 80+ Bronze ($50)\nCase: Budget ATX ($45)\n\n**Total: ~$560**\n\nPerformance: 1080p gaming at high settings, 60+ fps in most games. Great starter build!"
+      ]
+    },
+    {
+      "tag": "budget_mid_gaming",
+      "patterns": [
+        "build for 800",
+        "build for 900",
+        "build for 1000",
+        "build for 1100",
+        "build for 1200",
+        "gaming pc 1000",
+        "gaming pc 1200",
+        "mid range gaming",
+        "1440p gaming build"
+      ],
+      "responses": [
+        "**Mid-Range Gaming Build ($900-1200)**\n\nCPU: AMD Ryzen 5 7600 ($200)\nGPU: NVIDIA RTX 4060 Ti / AMD RX 7700 XT ($400)\nRAM: 16GB DDR5-5600 ($70)\nStorage: 1TB NVMe Gen4 SSD ($80)\nMotherboard: B650 ($140)\nPSU: 650W 80+ Gold ($80)\nCase: Mid-tower with airflow ($70)\nCooler: Tower air cooler ($35)\n\n**Total: ~$1075**\n\nPerformance: 1440p gaming at high/ultra settings, 100+ fps in most games. Excellent value!"
+      ]
+    },
+    {
+      "tag": "budget_high_gaming",
+      "patterns": [
+        "build for 1500",
+        "build for 1600",
+        "build for 1700",
+        "build for 1800",
+        "gaming pc 1500",
+        "gaming pc 1800",
+        "high end gaming",
+        "4k gaming build"
+      ],
+      "responses": [
+        "**High-End Gaming Build ($1500-1800)**\n\nCPU: AMD Ryzen 7 7800X3D ($380)\nGPU: NVIDIA RTX 4070 Ti Super ($750)\nRAM: 32GB DDR5-6000 ($110)\nStorage: 2TB NVMe Gen4 SSD ($120)\nMotherboard: B650 ($160)\nPSU: 750W 80+ Gold ($100)\nCase: Premium airflow case ($90)\nCooler: 240mm AIO ($90)\n\n**Total: ~$1800**\n\nPerformance: 1440p ultra 144+ fps, 4K high 60+ fps. Top-tier gaming experience!"
+      ]
+    },
+    {
+      "tag": "budget_enthusiast_gaming",
+      "patterns": [
+        "build for 2000",
+        "build for 2500",
+        "build for 3000",
+        "gaming pc 2000",
+        "gaming pc 3000",
+        "enthusiast build",
+        "best gaming pc",
+        "ultimate gaming build"
+      ],
+      "responses": [
+        "**Enthusiast Gaming Build ($2000-3000)**\n\nCPU: AMD Ryzen 9 7950X3D ($550)\nGPU: NVIDIA RTX 4080 Super / RTX 4090 ($1000-1600)\nRAM: 32GB DDR5-6400 CL30 ($150)\nStorage: 2TB NVMe Gen4 + 2TB Gen4 ($240)\nMotherboard: X670E ($280)\nPSU: 850W 80+ Platinum ($150)\nCase: Premium case with RGB ($130)\nCooler: 360mm AIO ($140)\n\n**Total: ~$2640-3240**\n\nPerformance: 4K ultra 100+ fps, future-proof for years. No compromises!"
+      ]
+    },
+    {
+      "tag": "workstation_entry",
+      "patterns": [
+        "workstation 500",
+        "workstation 600",
+        "workstation 700",
+        "pc for programming 600",
+        "coding pc budget",
+        "entry workstation"
+      ],
+      "responses": [
+        "**Entry Workstation ($500-700)**\n\nCPU: AMD Ryzen 5 5600 ($130)\nGPU: Integrated or GT 1030 ($0-80)\nRAM: 32GB DDR4-3200 ($60)\nStorage: 1TB NVMe SSD ($50)\nMotherboard: B450M ($70)\nPSU: 550W 80+ Bronze ($50)\nCase: Budget ATX ($45)\n\n**Total: ~$485**\n\nGood for: Programming, light photo editing, office work. Prioritizes RAM and fast storage."
+      ]
+    },
+    {
+      "tag": "workstation_mid",
+      "patterns": [
+        "workstation 1000",
+        "workstation 1200",
+        "workstation 1500",
+        "video editing pc 1200",
+        "3d modeling pc 1500",
+        "content creation build"
+      ],
+      "responses": [
+        "**Mid-Range Workstation ($1000-1500)**\n\nCPU: AMD Ryzen 7 7700 ($280)\nGPU: NVIDIA RTX 4060 ($300)\nRAM: 64GB DDR5-5600 ($180)\nStorage: 2TB NVMe Gen4 ($120)\nMotherboard: B650 ($140)\nPSU: 650W 80+ Gold ($80)\nCase: Mid-tower ($70)\nCooler: Tower air cooler ($40)\n\n**Total: ~$1210**\n\nGood for: Video editing (1080p/1440p), 3D modeling, programming, multi-tasking. Strong CPU and plenty of RAM."
+      ]
+    },
+    {
+      "tag": "workstation_high",
+      "patterns": [
+        "workstation 2000",
+        "workstation 2500",
+        "workstation 3000",
+        "professional workstation",
+        "video editing pc 2500",
+        "3d rendering pc"
+      ],
+      "responses": [
+        "**High-End Workstation ($2000-3000)**\n\nCPU: AMD Ryzen 9 7950X ($550)\nGPU: NVIDIA RTX 4070 Ti / RTX 4080 ($750-1000)\nRAM: 64GB DDR5-6000 ($220)\nStorage: 2TB NVMe Gen4 + 4TB SATA SSD ($280)\nMotherboard: X670 ($250)\nPSU: 850W 80+ Gold ($130)\nCase: Premium airflow case ($110)\nCooler: 360mm AIO ($140)\n\n**Total: ~$2430-2680**\n\nGood for: 4K video editing, heavy 3D rendering, compiling, VMs. Professional-grade performance."
+      ]
+    },
+    {
+      "tag": "streaming_build",
+      "patterns": [
+        "streaming pc",
+        "pc for streaming",
+        "stream and game",
+        "twitch streaming build",
+        "streaming pc 1500",
+        "streaming pc 2000"
+      ],
+      "responses": [
+        "**Streaming & Gaming Build ($1500-2000)**\n\nCPU: AMD Ryzen 7 7700X ($300)\nGPU: NVIDIA RTX 4070 ($550)\nRAM: 32GB DDR5-6000 ($110)\nStorage: 2TB NVMe Gen4 ($120)\nMotherboard: B650 ($160)\nPSU: 750W 80+ Gold ($100)\nCase: Airflow-focused ($80)\nCooler: 240mm AIO ($90)\n\n**Total: ~$1510**\n\nPerformance: Stream 1080p/60fps while gaming at 1440p high settings. NVENC encoder handles streaming with minimal performance hit."
+      ]
+    },
+    {
+      "tag": "specific_budget_help",
+      "patterns": [
+        "what can i build for",
+        "pc parts for",
+        "build within budget",
+        "recommend build for"
+      ],
+      "responses": [
+        "Tell me your exact budget and main use (gaming/workstation/streaming), and I'll suggest a complete parts list!",
+        "Share your budget number and whether it's for gaming, work, or streaming, and I'll map out the best build."
+      ]
+    },
+    {
+      "tag": "component_cpu",
+      "patterns": [
+        "what cpu should i get",
+        "best cpu for gaming",
+        "amd or intel",
+        "cpu recommendation",
+        "processor advice",
+        "which processor",
+        "cpu vs processor",
+        "ryzen or intel",
+        "best processor",
+        "cpu buying guide"
+      ],
+      "responses": [
+        "**CPU Guide:**\n\nGaming: Ryzen 5 7600 (budget), Ryzen 7 7800X3D (high-end)\nWorkstation: Ryzen 7 7700 (mid), Ryzen 9 7950X (high-end)\nBudget: Ryzen 5 5600\n\nAMD offers better value right now; Intel 13th/14th gen competitive but watch power draw."
+      ]
+    },
+    {
+      "tag": "component_gpu",
+      "patterns": [
+        "what gpu should i get",
+        "best graphics card",
+        "nvidia or amd gpu",
+        "gpu recommendation",
+        "graphics card advice",
+        "which graphics card",
+        "rtx or radeon",
+        "nvidia vs amd",
+        "best gpu",
+        "video card recommendation"
+      ],
+      "responses": [
+        "**GPU Guide:**\n\n1080p: RX 6600 ($200), RTX 4060 ($300)\n1440p: RX 7700 XT ($400), RTX 4060 Ti / 4070 ($400-550)\n4K: RTX 4070 Ti Super ($750), RTX 4080 Super ($1000)\n\nNVIDIA has better ray tracing and DLSS; AMD offers more VRAM at lower prices."
+      ]
+    },
+    {
+      "tag": "component_ram",
+      "patterns": [
+        "how much ram do i need",
+        "16gb or 32gb",
+        "ram speed",
+        "ddr4 or ddr5"
+      ],
+      "responses": [
+        "**RAM Guide:**\n\nGaming: 16GB minimum, 32GB for future-proofing\nWorkstation: 32GB minimum, 64GB for heavy work\n\nSpeed: DDR4-3200+ or DDR5-5600+\nDDR5 is better for new builds (Ryzen 7000/Intel 13th gen+); DDR4 fine for budget builds."
+      ]
+    },
+    {
+      "tag": "help",
+      "patterns": [
+        "help",
+        "help me",
+        "what can you do",
+        "how does this work",
+        "guide",
+        "instructions"
+      ],
+      "responses": [
+        "**PC Building Chatbot Help**\n\nI can help you with:\n✓ Complete PC build recommendations by budget\n✓ Detailed info on each PC component\n✓ Choosing parts for gaming, workstation, or streaming\n\nTry asking:\n- 'gaming pc for $1000'\n- 'info about processors'\n- 'what motherboard should i get'\n- 'help with RAM'\n\nType 'about' to learn what parts you need for a PC!"
+      ]
+    },
+    {
+      "tag": "about",
+      "patterns": [
+        "about",
+        "what is a pc",
+        "pc parts list",
+        "what do i need to build a pc",
+        "pc components",
+        "parts needed for pc"
+      ],
+      "responses": [
+        "**Essential PC Parts You Need:**\n\n1. **Processor (CPU)** - The brain of your PC\n2. **Graphics Card (GPU)** - Renders graphics and games\n3. **Motherboard** - Connects all components\n4. **RAM (Memory)** - Temporary fast storage\n5. **Storage (SSD/HDD)** - Permanent file storage\n6. **Power Supply (PSU)** - Powers everything\n7. **Case** - Houses all components\n8. **Cooling** - Keeps temps in check\n\nAsk 'info processor' or 'info gpu' to learn about each part!"
+      ]
+    },
+    {
+      "tag": "info_processor",
+      "patterns": [
+        "info processor",
+        "info cpu",
+        "tell me about processors",
+        "tell me about cpu",
+        "what is a processor",
+        "what is a cpu",
+        "processor info",
+        "cpu info",
+        "help with cpu",
+        "help with processor"
+      ],
+      "responses": [
+        "**PROCESSOR (CPU) - The Brain of Your PC**\n\n**What it does:**\nExecutes instructions and handles all computing tasks.\n\n**What to look for:**\n• **Core Count**: More cores = better multitasking (6-8 for gaming, 12+ for workstations)\n• **Clock Speed**: Higher GHz = faster per-core performance\n• **Generation**: Newer = better efficiency (AMD Ryzen 7000, Intel 13th/14th gen)\n• **Cache**: More L3 cache helps with gaming (X3D chips)\n\n**Top picks:**\n- Budget: Ryzen 5 5600 ($130)\n- Mid: Ryzen 5 7600 / Intel i5-13600K ($200-280)\n- High-end Gaming: Ryzen 7 7800X3D ($380)\n- Workstation: Ryzen 9 7950X ($550)"
+      ]
+    },
+    {
+      "tag": "info_gpu",
+      "patterns": [
+        "info gpu",
+        "info graphics card",
+        "tell me about gpu",
+        "tell me about graphics card",
+        "what is a gpu",
+        "what is graphics card",
+        "gpu info",
+        "graphics card info",
+        "help with gpu",
+        "help with graphics card"
+      ],
+      "responses": [
+        "**GRAPHICS CARD (GPU) - Gaming & Visual Power**\n\n**What it does:**\nRenders graphics, games, video editing, and 3D work.\n\n**What to look for:**\n• **VRAM**: 8GB minimum for 1080p, 12GB+ for 1440p/4K\n• **Resolution Target**: Match GPU to your monitor (1080p/1440p/4K)\n• **Ray Tracing**: NVIDIA better, but AMD catching up\n• **DLSS/FSR**: Upscaling tech for better FPS\n• **Power Draw**: Check your PSU can handle it (200-450W range)\n\n**Top picks:**\n- 1080p Gaming: RX 6600 ($200), RTX 4060 ($300)\n- 1440p Gaming: RX 7700 XT ($400), RTX 4070 ($550)\n- 4K Gaming: RTX 4070 Ti Super ($750), RTX 4080 ($1000)\n- Workstation: RTX 4060/4070 for CUDA acceleration"
+      ]
+    },
+    {
+      "tag": "info_motherboard",
+      "patterns": [
+        "info motherboard",
+        "info mobo",
+        "tell me about motherboard",
+        "what is a motherboard",
+        "motherboard info",
+        "help with motherboard",
+        "mobo info"
+      ],
+      "responses": [
+        "**MOTHERBOARD - The Connection Hub**\n\n**What it does:**\nConnects CPU, RAM, GPU, storage, and all peripherals.\n\n**What to look for:**\n• **Socket Type**: Must match CPU (AM5 for Ryzen 7000, LGA1700 for Intel 13th/14th)\n• **Chipset**: B650 (AMD mid), X670 (AMD high), B760 (Intel mid), Z790 (Intel high)\n• **RAM Slots**: 4 slots recommended (2x16GB now, expand later)\n• **M.2 Slots**: At least 2 for NVMe SSDs\n• **VRM Quality**: Better VRMs = stable power for CPU (important for high-end CPUs)\n• **Form Factor**: ATX (full size), Micro-ATX (compact), Mini-ITX (tiny)\n\n**Recommended chipsets:**\n- AMD: B650 ($140), X670 ($250+)\n- Intel: B760 ($150), Z790 ($250+)"
+      ]
+    },
+    {
+      "tag": "info_ram",
+      "patterns": [
+        "info ram",
+        "info memory",
+        "tell me about ram",
+        "what is ram",
+        "ram info",
+        "memory info",
+        "help with ram"
+      ],
+      "responses": [
+        "**RAM (Memory) - Fast Temporary Storage**\n\n**What it does:**\nStores data actively being used by programs for instant access.\n\n**What to look for:**\n• **Capacity**: 16GB minimum (gaming), 32GB (heavy multitasking/creation), 64GB (professional work)\n• **Speed**: DDR4-3200+ or DDR5-5600+ (faster = better, especially for Ryzen)\n• **Latency (CL)**: Lower is better (CL16 for DDR4, CL30-36 for DDR5)\n• **Dual Channel**: Use 2 sticks (2x8GB or 2x16GB) for double bandwidth\n• **DDR4 vs DDR5**: DDR5 for new builds, DDR4 for budget/older platforms\n\n**Top picks:**\n- Budget Gaming: 16GB DDR4-3200 ($35)\n- Mid Gaming: 32GB DDR5-5600 ($110)\n- Workstation: 64GB DDR5-6000 ($220)"
+      ]
+    },
+    {
+      "tag": "info_storage",
+      "patterns": [
+        "info storage",
+        "info ssd",
+        "info hdd",
+        "tell me about storage",
+        "what is ssd",
+        "what is nvme",
+        "storage info",
+        "help with storage"
+      ],
+      "responses": [
+        "**STORAGE - Your Files & Programs**\n\n**What it does:**\nPermanently stores your OS, games, files, and programs.\n\n**What to look for:**\n• **Type**: NVMe SSD (fastest), SATA SSD (fast), HDD (slow, cheap bulk)\n• **Capacity**: 1TB minimum for gaming, 2TB+ recommended\n• **Speed**: Gen4 NVMe (7000 MB/s) vs Gen3 (3500 MB/s) - Gen4 for new builds\n• **TBW/Endurance**: Higher = longer lifespan (look for 600+ TBW for 1TB)\n• **DRAM Cache**: Better SSDs have it (improves sustained writes)\n\n**Recommended setup:**\n- Primary: 1TB NVMe Gen4 SSD ($80) - OS and main programs\n- Secondary: 2TB NVMe/SATA ($100-120) - games and files\n- Bulk: 4TB HDD ($80) - only if you need tons of storage\n\n**Never use HDD as your primary/OS drive!**"
+      ]
+    },
+    {
+      "tag": "info_psu",
+      "patterns": [
+        "info psu",
+        "info power supply",
+        "tell me about psu",
+        "what is psu",
+        "psu info",
+        "power supply info",
+        "help with psu"
+      ],
+      "responses": [
+        "**POWER SUPPLY (PSU) - Powers Everything**\n\n**What it does:**\nConverts AC power to DC and delivers stable power to all components.\n\n**What to look for:**\n• **Wattage**: 550W (entry), 650-750W (mid), 850W+ (high-end)\n• **Efficiency Rating**: 80+ Bronze minimum, 80+ Gold recommended, Platinum/Titanium for premium\n• **Modularity**: Fully modular (best cable management), semi-modular (good), non-modular (budget)\n• **Brand Quality**: Stick to reputable brands (Corsair, EVGA, Seasonic, Thermaltake Toughpower)\n• **Protections**: OVP, UVP, OCP, SCP (all quality PSUs have these)\n\n**NEVER cheap out on PSU - it protects your entire build!**\n\n**Recommended:**\n- Budget: 550W 80+ Bronze ($50)\n- Mid: 750W 80+ Gold ($100)\n- High-end: 850W 80+ Gold/Platinum ($150)"
+      ]
+    },
+    {
+      "tag": "info_case",
+      "patterns": [
+        "info case",
+        "tell me about case",
+        "what is pc case",
+        "case info",
+        "help with case",
+        "pc case info"
+      ],
+      "responses": [
+        "**PC CASE - Houses Everything**\n\n**What it does:**\nHolds and protects all components, provides airflow and cable management.\n\n**What to look for:**\n• **Size/Form Factor**: ATX (standard), Micro-ATX (smaller), Mini-ITX (compact)\n• **Airflow**: Mesh front > solid front (prioritize cooling over looks)\n• **Fan Support**: At least 3-4 fan mounts (120mm or 140mm)\n• **GPU Clearance**: Check it fits your GPU length (usually 300-350mm)\n• **Cable Management**: Back panel space, rubber grommets, tie-down points\n• **Build Quality**: Steel > plastic, solid panels, good I/O (USB-C front if possible)\n\n**Top picks:**\n- Budget: Fractal Design Focus G ($45)\n- Mid: Corsair 4000D Airflow ($85)\n- Premium: Lian Li O11 Dynamic ($130)"
+      ]
+    },
+    {
+      "tag": "info_cooling",
+      "patterns": [
+        "info cooling",
+        "info cooler",
+        "tell me about cooling",
+        "what is cpu cooler",
+        "cooling info",
+        "help with cooling",
+        "air vs liquid"
+      ],
+      "responses": [
+        "**COOLING - Temperature Management**\n\n**What it does:**\nKeeps your CPU and system cool for stable performance and longevity.\n\n**What to look for:**\n• **Type**: Stock (included, basic), Tower Air (best value), AIO Liquid (quieter, premium)\n• **CPU TDP**: Match cooler to CPU power (65W vs 105W vs 170W)\n• **Height Clearance**: Check tower cooler fits in case (usually 150-165mm)\n• **Noise Level**: Look for dB ratings if you want quiet (sub 30dB)\n• **AIO Size**: 240mm (good), 280mm (better), 360mm (best)\n\n**When to use what:**\n- Stock cooler: Only for low-power CPUs (Ryzen 5 5600)\n- Tower Air ($30-50): Most builds, great value (Ryzen 5/7, Intel i5)\n- 240mm AIO ($80-100): High-end CPUs, quieter operation\n- 360mm AIO ($120-140): Enthusiast builds, heavy overclocking\n\n**Air cooling is usually enough! Only go AIO if you want lower noise or aesthetics.**"
+      ]
+    },
+    {
+      "tag": "unknown",
+      "patterns": [],
+      "responses": [
+        "Sorry, I didn't understand that.",
+        "Could you rephrase that?"
+      ]
+    }
+  ]
+}
